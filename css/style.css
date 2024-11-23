@@ -1,0 +1,123 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Degradado rosa pastel */
+    color: #333;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Contenedor principal */
+.main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #f8bbd0; /* Borde rosa pastel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #d81b60; /* Rosa oscuro para etiquetas */
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f8bbd0;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #d81b60;
+    box-shadow: 0 0 4px #d81b60;
+}
+
+/* Botones */
+button {
+    background-color: #f06292; /* Rosa intermedio */
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: scale(1.05); /* Animación de zoom */
+}
+
+button:active {
+    transform: scale(0.95); /* Efecto al presionar */
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fce4ec; /* Fondo rosa claro */
+    border: 1px solid #f8bbd0;
+    border-radius: 8px;
+}
+
+/* Estilo para items de hilazas */
+.hilaza-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hilaza-item button {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hilaza-item button:hover {
+    background-color: #d81b60;
+    transform: scale(1.05);
+}
+
+.hilaza-item button:active {
+    transform: scale(0.95);
+}
+
+/* Pie de página */
+.footer {
+    background-color: #f8bbd0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer .nav-link {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer .nav-link:hover {
+    color: #fce4ec;
+}
+/* Estilo para el botón de eliminar */  
