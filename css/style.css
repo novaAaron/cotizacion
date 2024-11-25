@@ -4,16 +4,42 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Degradado rosa pastel */
     color: #333;
+    line-height: 1.6;
 }
 
-.title {
+/* Cabecera */
+.header {
+    background-color: #f8bbd0;
+    padding: 10px 0;
     text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Ajustar enlaces en varias líneas si es necesario */
+}
+
+.nav-link {
+    color: #fff;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #fce4ec; /* Color hover rosa claro */
+    text-decoration: underline;
 }
 
 /* Contenedor principal */
 .main {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -82,25 +108,12 @@ button:active {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap; /* Permitir ajustes en dispositivos pequeños */
 }
 
-.hilaza-item button {
-    background-color: #f06292;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.hilaza-item button:hover {
-    background-color: #d81b60;
-    transform: scale(1.05);
-}
-
-.hilaza-item button:active {
-    transform: scale(0.95);
+.hilaza-item select,
+.hilaza-item input {
+    flex: 1 1 100%; /* Hacer que ocupen el 100% en móviles */
 }
 
 /* Pie de página */
@@ -112,7 +125,7 @@ button:active {
 
 .footer .nav-link {
     color: #fff;
-    margin: 0 15px;
+    margin: 5px;
     text-decoration: none;
     font-size: 16px;
 }
@@ -120,4 +133,56 @@ button:active {
 .footer .nav-link:hover {
     color: #fce4ec;
 }
-/* Estilo para el botón de eliminar */  
+
+/* === Media Queries para Responsividad === */
+
+/* Ajustes para pantallas de menos de 768px */
+@media (max-width: 768px) {
+    .main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Ajustes para pantallas de menos de 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column; /* Colocar enlaces en una columna */
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
